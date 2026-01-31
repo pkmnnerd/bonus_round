@@ -215,6 +215,64 @@ body {
   color: var(--error);
 }
 
+/* Revealed Letters Display */
+.revealed-letters-display {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background: transparent;
+  padding: 0;
+  margin-top: 0;
+}
+
+.letter-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+}
+
+.divider {
+  width: 2px;
+  height: 20px;
+  background: var(--tile-border);
+  opacity: 0.5;
+}
+
+.display-tile {
+  width: 30px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  background: transparent;
+  color: #ccc;
+  transition: all 0.3s ease;
+}
+
+.display-tile.revealed {
+  color: #1a1a1a;
+}
+
+.display-tile.empty {
+  border: 1px dashed var(--tile-border);
+  opacity: 0.5;
+}
+
+.display-tile.vowel {
+  color: #ccc;
+}
+
+.display-tile.revealed.vowel {
+  color: #1a1a1a;
+}
+
 /* Result Overlay */
 .result-overlay {
   position: fixed;

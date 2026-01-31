@@ -3,22 +3,14 @@ import './index.css';
 
 // --- DATA ---
 const INITIAL_PHRASES = [
-  // EASY
-  { phrase: "PIECE OF CAKE", category: "PHRASE", difficulty: "EASY" },
-  { phrase: "TAKING A NAP", category: "WHAT ARE YOU DOING?", difficulty: "EASY" },
+  // --- EASY (Heavy on R, S, T, L, N, E) ---
+  { phrase: "BETTER LATE THAN NEVER", category: "PHRASE", difficulty: "EASY" },
   { phrase: "MOUNTAIN RETREAT", category: "PLACE", difficulty: "EASY" },
-  { phrase: "GREEN TEA", category: "FOOD & DRINK", difficulty: "EASY" },
   { phrase: "TALENTED ARTIST", category: "PERSON", difficulty: "EASY" },
-  { phrase: "GARDEN FLOWERS", category: "LIVING THINGS", difficulty: "EASY" },
   { phrase: "STAY TUNED", category: "PHRASE", difficulty: "EASY" },
   { phrase: "LOCAL LIBRARY", category: "PLACE", difficulty: "EASY" },
   { phrase: "MAKING A DIFFERENCE", category: "WHAT ARE YOU DOING?", difficulty: "EASY" },
-  { phrase: "GOLDEN OPPORTUNITY", category: "THING", difficulty: "EASY" },
   { phrase: "OUT OF THE BLUE", category: "PHRASE", difficulty: "EASY" },
-  { phrase: "FRESH SQUEEZED LEMONADE", category: "FOOD & DRINK", difficulty: "EASY" },
-  { phrase: "FLUFFY KITTEN", category: "LIVING THING", difficulty: "EASY" },
-  { phrase: "BETTER LATE THAN NEVER", category: "PHRASE", difficulty: "EASY" },
-  { phrase: "COZY CABIN", category: "PLACE", difficulty: "EASY" },
   { phrase: "WINNING STREAK", category: "PHRASE", difficulty: "EASY" },
   { phrase: "STARTING THE ENGINE", category: "WHAT ARE YOU DOING?", difficulty: "EASY" },
   { phrase: "BEST IN SHOW", category: "PHRASE", difficulty: "EASY" },
@@ -27,25 +19,28 @@ const INITIAL_PHRASES = [
   { phrase: "TROPICAL ISLAND", category: "PLACE", difficulty: "EASY" },
   { phrase: "LEMON MERINGUE PIE", category: "FOOD & DRINK", difficulty: "EASY" },
   { phrase: "PROUD PARENTS", category: "PEOPLE", difficulty: "EASY" },
-  { phrase: "MAJESTIC EAGLE", category: "LIVING THING", difficulty: "EASY" },
-  { phrase: "BACK TO BASICS", category: "PHRASE", difficulty: "EASY" },
   { phrase: "SURPRISE ENDING", category: "THING", difficulty: "EASY" },
   { phrase: "READY SET GO", category: "PHRASE", difficulty: "EASY" },
   { phrase: "MORNING COFFEE", category: "FOOD & DRINK", difficulty: "EASY" },
   { phrase: "SUNNY WEATHER", category: "THING", difficulty: "EASY" },
   { phrase: "READING A NOVEL", category: "WHAT ARE YOU DOING?", difficulty: "EASY" },
+  { phrase: "WORTH THE WAIT", category: "PHRASE", difficulty: "EASY" },
+  { phrase: "VALUABLE ASSET", category: "THING", difficulty: "EASY" },
+  { phrase: "NEXT DOOR NEIGHBOR", category: "PERSON", difficulty: "EASY" },
+  { phrase: "JUST IN TIME", category: "PHRASE", difficulty: "EASY" },
+  { phrase: "GARDEN FLOWERS", category: "LIVING THINGS", difficulty: "EASY" },
+  { phrase: "STAYING ORGANIZED", category: "WHAT ARE YOU DOING?", difficulty: "EASY" },
+  { phrase: "GREEN TEA", category: "FOOD & DRINK", difficulty: "EASY" },
+  { phrase: "GOLDEN OPPORTUNITY", category: "THING", difficulty: "EASY" },
+  { phrase: "PIECE OF CAKE", category: "PHRASE", difficulty: "EASY" },
+  { phrase: "TAKING A NAP", category: "WHAT ARE YOU DOING?", difficulty: "EASY" },
 
-  // MEDIUM
-  { phrase: "LIVING THE DREAM-ISH", category: "PHRASE", difficulty: "MEDIUM" },
-  { phrase: "OVER-THE-TOP!", category: "PHRASE", difficulty: "MEDIUM" },
-  { phrase: "DON'T COUNT YOUR CHICKENS", category: "PROVERB", difficulty: "MEDIUM" },
+  // --- MEDIUM (Includes G, H, M, B, P, or Y) ---
   { phrase: "BUYING A SOUVENIR", category: "WHAT ARE YOU DOING?", difficulty: "MEDIUM" },
   { phrase: "SPICY GUACAMOLE", category: "FOOD & DRINK", difficulty: "MEDIUM" },
   { phrase: "QUIET NEIGHBORHOOD", category: "PLACE", difficulty: "MEDIUM" },
-  { phrase: "MYSTERY BOX", category: "THING", difficulty: "MEDIUM" },
   { phrase: "WILD HORSES", category: "LIVING THINGS", difficulty: "MEDIUM" },
   { phrase: "LOYAL COMPANION", category: "PERSON", difficulty: "MEDIUM" },
-  { phrase: "POCKET WATCH", category: "THING", difficulty: "MEDIUM" },
   { phrase: "WAKING UP EARLY", category: "WHAT ARE YOU DOING?", difficulty: "MEDIUM" },
   { phrase: "HIDDEN GEM", category: "PLACE", difficulty: "MEDIUM" },
   { phrase: "BLUEBERRY MUFFINS", category: "FOOD & DRINK", difficulty: "MEDIUM" },
@@ -57,17 +52,22 @@ const INITIAL_PHRASES = [
   { phrase: "EASY DOES IT", category: "PHRASE", difficulty: "MEDIUM" },
   { phrase: "BUSTLING CITY", category: "PLACE", difficulty: "MEDIUM" },
   { phrase: "CHESTNUTS ROASTING", category: "FOOD & DRINK", difficulty: "MEDIUM" },
-  { phrase: "WORTH THE WAIT", category: "PHRASE", difficulty: "MEDIUM" },
-  { phrase: "VALUABLE ASSET", category: "THING", difficulty: "MEDIUM" },
-  { phrase: "STAYING ORGANIZED", category: "WHAT ARE YOU DOING?", difficulty: "MEDIUM" },
   { phrase: "GOURMET BREAKFAST", category: "FOOD & DRINK", difficulty: "MEDIUM" },
-  { phrase: "NEXT DOOR NEIGHBOR", category: "PERSON", difficulty: "MEDIUM" },
   { phrase: "PLAYFUL PUPPIES", category: "LIVING THINGS", difficulty: "MEDIUM" },
-  { phrase: "JUST IN TIME", category: "PHRASE", difficulty: "MEDIUM" },
   { phrase: "POLKA DOT TIE", category: "THING", difficulty: "MEDIUM" },
-  { phrase: "KICKING BACK", category: "WHAT ARE YOU DOING?", difficulty: "MEDIUM" },
+  { phrase: "MAJESTIC EAGLE", category: "LIVING THING", difficulty: "MEDIUM" },
+  { phrase: "BACK TO BASICS", category: "PHRASE", difficulty: "MEDIUM" },
+  { phrase: "OVER-THE-TOP!", category: "PHRASE", difficulty: "MEDIUM" },
+  { phrase: "LIVING THE DREAM-ISH", category: "PHRASE", difficulty: "MEDIUM" },
+  { phrase: "UP TO NO GOOD", category: "PHRASE", difficulty: "MEDIUM" },
+  { phrase: "BAGGAGE CLAIM", category: "PLACE", difficulty: "MEDIUM" },
+  { phrase: "JOVIAL MOOD", category: "THING", difficulty: "MEDIUM" },
+  { phrase: "FROZEN YOGURT", category: "FOOD & DRINK", difficulty: "MEDIUM" },
+  { phrase: "JOVIAL MOOD", category: "THING", difficulty: "MEDIUM" },
+  { phrase: "PUBLIC AUCTION", category: "EVENT", difficulty: "MEDIUM" },
+  { phrase: "EXPECT THE UNEXPECTED", category: "PHRASE", difficulty: "MEDIUM" },
 
-  // HARD
+  // --- HARD (Includes J, Q, X, Z, K, W, or uncommon phrasing) ---
   { phrase: "JAZZ MUSICIAN", category: "PERSON", difficulty: "HARD" },
   { phrase: "QUARTZ CRYSTAL", category: "THING", difficulty: "HARD" },
   { phrase: "VIVID IMAGINATION", category: "THING", difficulty: "HARD" },
@@ -81,31 +81,31 @@ const INITIAL_PHRASES = [
   { phrase: "EXTRAORDINARY QUALITY", category: "THING", difficulty: "HARD" },
   { phrase: "WILD BUFFALO", category: "LIVING THING", difficulty: "HARD" },
   { phrase: "FANCY TUXEDO", category: "THING", difficulty: "HARD" },
-  { phrase: "JOVIAL MOOD", category: "THING", difficulty: "HARD" },
   { phrase: "SQUEAKY CLEAN", category: "PHRASE", difficulty: "HARD" },
   { phrase: "JUMPING ROPE", category: "WHAT ARE YOU DOING?", difficulty: "HARD" },
-  { phrase: "FROZEN YOGURT", category: "FOOD & DRINK", difficulty: "HARD" },
   { phrase: "OFF THE BEATEN PATH", category: "PHRASE", difficulty: "HARD" },
-  { phrase: "PUBLIC AUCTION", category: "EVENT", difficulty: "HARD" },
   { phrase: "KANGAROO POUCH", category: "THING", difficulty: "HARD" },
   { phrase: "ZYDECO MUSIC", category: "THING", difficulty: "HARD" },
   { phrase: "EQUIPMENT MANAGER", category: "PERSON", difficulty: "HARD" },
-  { phrase: "UP TO NO GOOD", category: "PHRASE", difficulty: "HARD" },
   { phrase: "FRENCH DIP SANDWICH", category: "FOOD & DRINK", difficulty: "HARD" },
   { phrase: "WHIPPING UP A BATCH", category: "WHAT ARE YOU DOING?", difficulty: "HARD" },
   { phrase: "JACKPOT WINNER", category: "PERSON", difficulty: "HARD" },
-  { phrase: "BAGGAGE CLAIM", category: "PLACE", difficulty: "HARD" },
-  { phrase: "EXPECT THE UNEXPECTED", category: "PHRASE", difficulty: "HARD" },
-  { phrase: "BACKYARD BARBECUE", category: "EVENT", difficulty: "HARD" },
   { phrase: "KNOWLEDGE IS POWER", category: "PHRASE", difficulty: "HARD" },
+  { phrase: "BACKYARD BARBECUE", category: "EVENT", difficulty: "HARD" },
+  { phrase: "DON'T COUNT YOUR CHICKENS", category: "PROVERB", difficulty: "HARD" },
+  { phrase: "MYSTERY BOX", category: "THING", difficulty: "HARD" },
+  { phrase: "POCKET WATCH", category: "THING", difficulty: "HARD" },
+  { phrase: "KICKING BACK", category: "WHAT ARE YOU DOING?", difficulty: "HARD" },
+  { phrase: "FRESH SQUEEZED LEMONADE", category: "FOOD & DRINK", difficulty: "HARD" },
+  { phrase: "FLUFFY KITTEN", category: "LIVING THING", difficulty: "HARD" },
 ];
 
 
 
 
 const RSTLNE = ['R', 'S', 'T', 'L', 'N', 'E'];
-const CONSONANTS = "BCDFGHJKMPQVXYZ".split(""); // Simplified vowel check
-const VOWELS = "AIOU".split(""); // E is already in RSTLNE
+const CONSONANTS = "BCDFGHJKLMNPQRSTVWXYZ".split("");
+const VOWELS = "AEIOU".split("");
 
 interface Phrase {
   phrase: string;
@@ -291,7 +291,7 @@ export default function App() {
             {word.split("").map((char: string, cIdx: number) => (
               <div
                 key={cIdx}
-                className={`tile ${revealedLetters.has(char) || gameState === 'WIN' || gameState === 'LOSE' ? 'revealed' : ''}`}
+                className={`tile ${(gameState !== 'START' && revealedLetters.has(char)) || gameState === 'WIN' || gameState === 'LOSE' ? 'revealed' : ''}`}
               >
                 {char}
               </div>
@@ -302,6 +302,30 @@ export default function App() {
           </div>
         ))}
       </div>
+
+      {(['LETTERS', 'REVEAL', 'SOLVE', 'WIN', 'LOSE'].includes(gameState)) && (
+        <div className="revealed-letters-display">
+          <div className="letter-group">
+            {RSTLNE.map(char => (
+              <div key={char} className="display-tile revealed">{char}</div>
+            ))}
+          </div>
+          <div className="divider" />
+          <div className="letter-group">
+            {pickedConsonants.map(char => (
+              <div key={char} className="display-tile revealed">{char}</div>
+            ))}
+            {pickedConsonants.length < 3 && Array.from({ length: 3 - pickedConsonants.length }).map((_, i) => (
+              <div key={`empty-c-${i}`} className="display-tile empty" />
+            ))}
+            {pickedVowel ? (
+              <div className="display-tile revealed vowel">{pickedVowel}</div>
+            ) : (
+              <div className="display-tile empty vowel" />
+            )}
+          </div>
+        </div>
+      )}
 
       {gameState === 'START' && (
         <div className="start-screen">
@@ -337,7 +361,7 @@ export default function App() {
               <button
                 key={c}
                 onClick={() => handlePickLetter(c)}
-                disabled={pickedConsonants.includes(c) || (pickedConsonants.length >= 3 && !pickedConsonants.includes(c))}
+                disabled={revealedLetters.has(c) || pickedConsonants.includes(c) || (pickedConsonants.length >= 3 && !pickedConsonants.includes(c))}
                 className={`letter-btn ${pickedConsonants.includes(c) ? 'selected' : ''}`}
               >
                 {c}
@@ -348,7 +372,7 @@ export default function App() {
               <button
                 key={v}
                 onClick={() => handlePickLetter(v)}
-                disabled={pickedVowel !== null}
+                disabled={revealedLetters.has(v) || pickedVowel !== null}
                 className={`letter-btn vowel ${pickedVowel === v ? 'selected' : ''}`}
               >
                 {v}
