@@ -3,67 +3,117 @@ import './index.css';
 
 // --- DATA ---
 const INITIAL_PHRASES = [
-  { phrase: "PIECE OF CAKE", category: "PHRASE" },
-  { phrase: "GOLDEN OPPORTUNITY", category: "THING" },
-  { phrase: "MAKING A DIFFERENCE", category: "WHAT ARE YOU DOING?" },
-  { phrase: "MOUNTAIN RETREAT", category: "PLACE" },
-  { phrase: "FRESH SQUEEZED LEMONADE", category: "FOOD & DRINK" },
-  { phrase: "OUT OF THE BLUE", category: "PHRASE" },
-  { phrase: "TALENTED ARTIST", category: "PERSON" },
-  { phrase: "FLUFFY KITTEN", category: "LIVING THING" },
-  { phrase: "BETTER LATE THAN NEVER", category: "PHRASE" },
-  { phrase: "MYSTERY BOX", category: "THING" },
-  { phrase: "KEEPING A SECRET", category: "WHAT ARE YOU DOING?" },
-  { phrase: "TROPICAL PARADISE", category: "PLACE" },
-  { phrase: "HOT APPLE CIDER", category: "FOOD & DRINK" },
-  { phrase: "PROUD PARENTS", category: "PEOPLE" },
-  { phrase: "MAJESTIC EAGLE", category: "LIVING THING" },
-  { phrase: "JUST IN TIME", category: "PHRASE" },
-  { phrase: "HIGH EXPECTATIONS", category: "THINGS" },
-  { phrase: "BUYING A SOUVENIR", category: "WHAT ARE YOU DOING?" },
-  { phrase: "QUIET NEIGHBORHOOD", category: "PLACE" },
-  { phrase: "SPICY GUACAMOLE", category: "FOOD & DRINK" },
-  { phrase: "FAMOUS AUTHOR", category: "PERSON" },
-  { phrase: "GARDEN FLOWERS", category: "LIVING THINGS" },
-  { phrase: "WORTH THE WAIT", category: "PHRASE" },
-  { phrase: "VALUABLE ASSET", category: "THING" },
-  { phrase: "STAYING ORGANIZED", category: "WHAT ARE YOU DOING?" },
-  { phrase: "LOCAL LIBRARY", category: "PLACE" },
-  { phrase: "GOURMET BREAKFAST", category: "FOOD & DRINK" },
-  { phrase: "DISTANT RELATIVE", category: "PERSON" },
-  { phrase: "PLAYFUL PUPPIES", category: "LIVING THINGS" },
-  { phrase: "EASY DOES IT", category: "PHRASE" },
-  { phrase: "LUCKY CHARM", category: "THING" },
-  { phrase: "LOOKING SHARP", category: "WHAT ARE YOU DOING?" },
-  { phrase: "BUSTLING CITY", category: "PLACE" },
-  { phrase: "CHESTNUTS ROASTING", category: "FOOD & DRINK" },
-  { phrase: "LOYAL COMPANION", category: "PERSON" },
-  { phrase: "EXOTIC PLANTS", category: "LIVING THINGS" },
-  { phrase: "BACK TO BASICS", category: "PHRASE" },
-  { phrase: "SURPRISE ENDING", category: "THING" },
-  { phrase: "TAKING A CHANCE", category: "WHAT ARE YOU DOING?" },
-  { phrase: "COZY CABIN", category: "PLACE" },
-  { phrase: "ICED CARAMEL MACCHIATO", category: "FOOD & DRINK" },
-  { phrase: "NEXT DOOR NEIGHBOR", category: "PERSON" },
-  { phrase: "WILD HORSES", category: "LIVING THINGS" },
-  { phrase: "STAY TUNED", category: "PHRASE" },
+  // EASY
+  { phrase: "PIECE OF CAKE", category: "PHRASE", difficulty: "EASY" },
+  { phrase: "TAKING A NAP", category: "WHAT ARE YOU DOING?", difficulty: "EASY" },
+  { phrase: "MOUNTAIN RETREAT", category: "PLACE", difficulty: "EASY" },
+  { phrase: "GREEN TEA", category: "FOOD & DRINK", difficulty: "EASY" },
+  { phrase: "TALENTED ARTIST", category: "PERSON", difficulty: "EASY" },
+  { phrase: "GARDEN FLOWERS", category: "LIVING THINGS", difficulty: "EASY" },
+  { phrase: "STAY TUNED", category: "PHRASE", difficulty: "EASY" },
+  { phrase: "LOCAL LIBRARY", category: "PLACE", difficulty: "EASY" },
+  { phrase: "MAKING A DIFFERENCE", category: "WHAT ARE YOU DOING?", difficulty: "EASY" },
+  { phrase: "GOLDEN OPPORTUNITY", category: "THING", difficulty: "EASY" },
+  { phrase: "OUT OF THE BLUE", category: "PHRASE", difficulty: "EASY" },
+  { phrase: "FRESH SQUEEZED LEMONADE", category: "FOOD & DRINK", difficulty: "EASY" },
+  { phrase: "FLUFFY KITTEN", category: "LIVING THING", difficulty: "EASY" },
+  { phrase: "BETTER LATE THAN NEVER", category: "PHRASE", difficulty: "EASY" },
+  { phrase: "COZY CABIN", category: "PLACE", difficulty: "EASY" },
+  { phrase: "WINNING STREAK", category: "PHRASE", difficulty: "EASY" },
+  { phrase: "STARTING THE ENGINE", category: "WHAT ARE YOU DOING?", difficulty: "EASY" },
+  { phrase: "BEST IN SHOW", category: "PHRASE", difficulty: "EASY" },
+  { phrase: "A BREATH OF FRESH AIR", category: "PHRASE", difficulty: "EASY" },
+  { phrase: "DANCING THE NIGHT AWAY", category: "WHAT ARE YOU DOING?", difficulty: "EASY" },
+  { phrase: "TROPICAL ISLAND", category: "PLACE", difficulty: "EASY" },
+  { phrase: "LEMON MERINGUE PIE", category: "FOOD & DRINK", difficulty: "EASY" },
+  { phrase: "PROUD PARENTS", category: "PEOPLE", difficulty: "EASY" },
+  { phrase: "MAJESTIC EAGLE", category: "LIVING THING", difficulty: "EASY" },
+  { phrase: "BACK TO BASICS", category: "PHRASE", difficulty: "EASY" },
+  { phrase: "SURPRISE ENDING", category: "THING", difficulty: "EASY" },
+  { phrase: "READY SET GO", category: "PHRASE", difficulty: "EASY" },
+  { phrase: "MORNING COFFEE", category: "FOOD & DRINK", difficulty: "EASY" },
+  { phrase: "SUNNY WEATHER", category: "THING", difficulty: "EASY" },
+  { phrase: "READING A NOVEL", category: "WHAT ARE YOU DOING?", difficulty: "EASY" },
+
+  // MEDIUM
+  { phrase: "LIVING THE DREAM-ISH", category: "PHRASE", difficulty: "MEDIUM" },
+  { phrase: "OVER-THE-TOP!", category: "PHRASE", difficulty: "MEDIUM" },
+  { phrase: "DON'T COUNT YOUR CHICKENS", category: "PROVERB", difficulty: "MEDIUM" },
+  { phrase: "BUYING A SOUVENIR", category: "WHAT ARE YOU DOING?", difficulty: "MEDIUM" },
+  { phrase: "SPICY GUACAMOLE", category: "FOOD & DRINK", difficulty: "MEDIUM" },
+  { phrase: "QUIET NEIGHBORHOOD", category: "PLACE", difficulty: "MEDIUM" },
+  { phrase: "MYSTERY BOX", category: "THING", difficulty: "MEDIUM" },
+  { phrase: "WILD HORSES", category: "LIVING THINGS", difficulty: "MEDIUM" },
+  { phrase: "LOYAL COMPANION", category: "PERSON", difficulty: "MEDIUM" },
+  { phrase: "POCKET WATCH", category: "THING", difficulty: "MEDIUM" },
+  { phrase: "WAKING UP EARLY", category: "WHAT ARE YOU DOING?", difficulty: "MEDIUM" },
+  { phrase: "HIDDEN GEM", category: "PLACE", difficulty: "MEDIUM" },
+  { phrase: "BLUEBERRY MUFFINS", category: "FOOD & DRINK", difficulty: "MEDIUM" },
+  { phrase: "GLOWING REVIEW", category: "THING", difficulty: "MEDIUM" },
+  { phrase: "WAITING FOR THE BUS", category: "WHAT ARE YOU DOING?", difficulty: "MEDIUM" },
+  { phrase: "BRIGHT FUTURE", category: "THING", difficulty: "MEDIUM" },
+  { phrase: "FAMOUS AUTHOR", category: "PERSON", difficulty: "MEDIUM" },
+  { phrase: "EXOTIC PLANTS", category: "LIVING THINGS", difficulty: "MEDIUM" },
+  { phrase: "EASY DOES IT", category: "PHRASE", difficulty: "MEDIUM" },
+  { phrase: "BUSTLING CITY", category: "PLACE", difficulty: "MEDIUM" },
+  { phrase: "CHESTNUTS ROASTING", category: "FOOD & DRINK", difficulty: "MEDIUM" },
+  { phrase: "WORTH THE WAIT", category: "PHRASE", difficulty: "MEDIUM" },
+  { phrase: "VALUABLE ASSET", category: "THING", difficulty: "MEDIUM" },
+  { phrase: "STAYING ORGANIZED", category: "WHAT ARE YOU DOING?", difficulty: "MEDIUM" },
+  { phrase: "GOURMET BREAKFAST", category: "FOOD & DRINK", difficulty: "MEDIUM" },
+  { phrase: "NEXT DOOR NEIGHBOR", category: "PERSON", difficulty: "MEDIUM" },
+  { phrase: "PLAYFUL PUPPIES", category: "LIVING THINGS", difficulty: "MEDIUM" },
+  { phrase: "JUST IN TIME", category: "PHRASE", difficulty: "MEDIUM" },
+  { phrase: "POLKA DOT TIE", category: "THING", difficulty: "MEDIUM" },
+  { phrase: "KICKING BACK", category: "WHAT ARE YOU DOING?", difficulty: "MEDIUM" },
+
+  // HARD
+  { phrase: "JAZZ MUSICIAN", category: "PERSON", difficulty: "HARD" },
+  { phrase: "QUARTZ CRYSTAL", category: "THING", difficulty: "HARD" },
+  { phrase: "VIVID IMAGINATION", category: "THING", difficulty: "HARD" },
+  { phrase: "ZIGZAGGING AROUND", category: "WHAT ARE YOU DOING?", difficulty: "HARD" },
+  { phrase: "BOX OF CANDY", category: "FOOD & DRINK", difficulty: "HARD" },
+  { phrase: "WIZARD OF OZ", category: "CHARACTER", difficulty: "HARD" },
+  { phrase: "QUICK REFLEXES", category: "THINGS", difficulty: "HARD" },
+  { phrase: "PICKING UP THE SLACK", category: "WHAT ARE YOU DOING?", difficulty: "HARD" },
+  { phrase: "AQUARIUM EXHIBIT", category: "PLACE", difficulty: "HARD" },
+  { phrase: "PUMPKIN PATCH", category: "PLACE", difficulty: "HARD" },
+  { phrase: "EXTRAORDINARY QUALITY", category: "THING", difficulty: "HARD" },
+  { phrase: "WILD BUFFALO", category: "LIVING THING", difficulty: "HARD" },
+  { phrase: "FANCY TUXEDO", category: "THING", difficulty: "HARD" },
+  { phrase: "JOVIAL MOOD", category: "THING", difficulty: "HARD" },
+  { phrase: "SQUEAKY CLEAN", category: "PHRASE", difficulty: "HARD" },
+  { phrase: "JUMPING ROPE", category: "WHAT ARE YOU DOING?", difficulty: "HARD" },
+  { phrase: "FROZEN YOGURT", category: "FOOD & DRINK", difficulty: "HARD" },
+  { phrase: "OFF THE BEATEN PATH", category: "PHRASE", difficulty: "HARD" },
+  { phrase: "PUBLIC AUCTION", category: "EVENT", difficulty: "HARD" },
+  { phrase: "KANGAROO POUCH", category: "THING", difficulty: "HARD" },
+  { phrase: "ZYDECO MUSIC", category: "THING", difficulty: "HARD" },
+  { phrase: "EQUIPMENT MANAGER", category: "PERSON", difficulty: "HARD" },
+  { phrase: "UP TO NO GOOD", category: "PHRASE", difficulty: "HARD" },
+  { phrase: "FRENCH DIP SANDWICH", category: "FOOD & DRINK", difficulty: "HARD" },
+  { phrase: "WHIPPING UP A BATCH", category: "WHAT ARE YOU DOING?", difficulty: "HARD" },
+  { phrase: "JACKPOT WINNER", category: "PERSON", difficulty: "HARD" },
+  { phrase: "BAGGAGE CLAIM", category: "PLACE", difficulty: "HARD" },
+  { phrase: "EXPECT THE UNEXPECTED", category: "PHRASE", difficulty: "HARD" },
+  { phrase: "BACKYARD BARBECUE", category: "EVENT", difficulty: "HARD" },
+  { phrase: "KNOWLEDGE IS POWER", category: "PHRASE", difficulty: "HARD" },
 ];
 
-const shuffle = <T,>(array: T[]): T[] => {
-  const arr = [...array];
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
-  return arr;
-};
 
-const PHRASES = shuffle(INITIAL_PHRASES);
+
 
 const RSTLNE = ['R', 'S', 'T', 'L', 'N', 'E'];
 const CONSONANTS = "BCDFGHJKMPQVXYZ".split(""); // Simplified vowel check
 const VOWELS = "AIOU".split(""); // E is already in RSTLNE
 
+interface Phrase {
+  phrase: string;
+  category: string;
+  difficulty: string;
+}
+
+type Difficulty = 'EASY' | 'MEDIUM' | 'HARD';
 type GameState = 'START' | 'LETTERS' | 'REVEAL' | 'SOLVE' | 'WIN' | 'LOSE';
 
 export default function App() {
@@ -77,16 +127,34 @@ export default function App() {
     return revealed;
   };
 
-  const [currentIdx, setCurrentIdx] = useState(0);
   const [gameState, setGameState] = useState<GameState>('START');
-  const [revealedLetters, setRevealedLetters] = useState<Set<string>>(() => getInitialRevealed(PHRASES[0].phrase.toUpperCase()));
+  const [difficulty, setDifficulty] = useState<Difficulty>('EASY');
+  const [currentPhraseObj, setCurrentPhraseObj] = useState<Phrase>(() => {
+    const easyPool = INITIAL_PHRASES.filter(p => p.difficulty === 'EASY');
+    return easyPool[Math.floor(Math.random() * easyPool.length)];
+  });
+
+  const [revealedLetters, setRevealedLetters] = useState<Set<string>>(() =>
+    getInitialRevealed(currentPhraseObj.phrase.toUpperCase())
+  );
   const [pickedConsonants, setPickedConsonants] = useState<string[]>([]);
   const [pickedVowel, setPickedVowel] = useState<string | null>(null);
   const [solveInput, setSolveInput] = useState("");
   const [timeLeft, setTimeLeft] = useState(20);
 
-  const currentPhrase = PHRASES[currentIdx].phrase.toUpperCase();
-  const currentCategory = PHRASES[currentIdx].category;
+  const currentPhrase = currentPhraseObj.phrase.toUpperCase();
+  const currentCategory = currentPhraseObj.category;
+
+  const handleDifficultyChange = (d: Difficulty) => {
+    setDifficulty(d);
+    const pool = INITIAL_PHRASES.filter(p => p.difficulty === d);
+    const nextPhrase = pool[Math.floor(Math.random() * pool.length)];
+    setCurrentPhraseObj(nextPhrase);
+    setRevealedLetters(getInitialRevealed(nextPhrase.phrase.toUpperCase()));
+    setPickedConsonants([]);
+    setPickedVowel(null);
+    setSolveInput("");
+  };
 
   // --- LOGIC ---
   const startTimer = useCallback(() => {
@@ -164,7 +232,7 @@ export default function App() {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [gameState, pickedConsonants, pickedVowel, revealedLetters, currentIdx]);
+  }, [gameState, pickedConsonants, pickedVowel, revealedLetters, currentPhrase]);
 
   // Auto-reveal when selection is complete
   useEffect(() => {
@@ -193,27 +261,34 @@ export default function App() {
     });
   };
 
-  const resetGame = () => {
-    const nextIdx = (currentIdx + 1) % PHRASES.length;
-    const nextPhrase = PHRASES[nextIdx].phrase.toUpperCase();
+  const startGame = () => {
+    setGameState('LETTERS');
+  };
 
-    setGameState('START');
-    setCurrentIdx(nextIdx);
-    setRevealedLetters(getInitialRevealed(nextPhrase));
+  const resetGame = () => {
+    const pool = INITIAL_PHRASES.filter(p => p.difficulty === difficulty);
+    const nextPhrase = pool[Math.floor(Math.random() * pool.length)];
+
+    setCurrentPhraseObj(nextPhrase);
+    setRevealedLetters(getInitialRevealed(nextPhrase.phrase.toUpperCase()));
     setPickedConsonants([]);
     setPickedVowel(null);
     setSolveInput("");
     setTimeLeft(20);
+    setGameState('START');
   };
 
   return (
     <div className="game-container">
-      <div className="category-badge">{currentCategory}</div>
+      <div className="info-header">
+        <div className="difficulty-badge">{difficulty}</div>
+        <div className="category-badge">{currentCategory}</div>
+      </div>
 
       <div className="phrase-grid">
-        {currentPhrase.split(" ").map((word, wIdx, array) => (
+        {currentPhrase.split(" ").map((word: string, wIdx: number, array: string[]) => (
           <div key={wIdx} className="word-group">
-            {word.split("").map((char, cIdx) => (
+            {word.split("").map((char: string, cIdx: number) => (
               <div
                 key={cIdx}
                 className={`tile ${revealedLetters.has(char) || gameState === 'WIN' || gameState === 'LOSE' ? 'revealed' : ''}`}
@@ -229,9 +304,25 @@ export default function App() {
       </div>
 
       {gameState === 'START' && (
-        <button className="play-again-btn" onClick={() => setGameState('LETTERS')}>
-          LET'S PLAY!
-        </button>
+        <div className="start-screen">
+          <div className="difficulty-instructions">
+            <h2>Select Difficulty</h2>
+          </div>
+          <div className="difficulty-selector">
+            {(['EASY', 'MEDIUM', 'HARD'] as Difficulty[]).map((d) => (
+              <button
+                key={d}
+                className={`difficulty-btn ${difficulty === d ? 'active' : ''}`}
+                onClick={() => handleDifficultyChange(d)}
+              >
+                {d}
+              </button>
+            ))}
+          </div>
+          <button className="play-again-btn" onClick={startGame}>
+            LET'S PLAY!
+          </button>
+        </div>
       )}
 
       {gameState === 'LETTERS' && (
