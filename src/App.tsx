@@ -61,7 +61,7 @@ const shuffle = <T,>(array: T[]): T[] => {
 const PHRASES = shuffle(INITIAL_PHRASES);
 
 const RSTLNE = ['R', 'S', 'T', 'L', 'N', 'E'];
-const CONSONANTS = "BCDFGHJKMPQWXYZ".split(""); // Simplified vowel check
+const CONSONANTS = "BCDFGHJKMPQVXYZ".split(""); // Simplified vowel check
 const VOWELS = "AIOU".split(""); // E is already in RSTLNE
 
 type GameState = 'START' | 'LETTERS' | 'REVEAL' | 'SOLVE' | 'WIN' | 'LOSE';
