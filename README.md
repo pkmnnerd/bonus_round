@@ -3,7 +3,7 @@ I couldn't find one online.
 
 It was much less work than figuring it out myself, but the AI was much less capable
 than I thought, as it had trouble rendering spaces, and briefly showing the next word. It even
-put O as a consonant. Maybe I should have used a larger model than Gemini 3 Flash.
+put O as a consonant. Maybe I should have used a better model than Gemini 3 Flash.
 
 AI generated README below:
 ----
