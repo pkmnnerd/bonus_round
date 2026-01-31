@@ -8,8 +8,36 @@
   --tile-bg: #e9ecef;
   --tile-border: #ced4da;
   --tile-reveal: #ffffff;
+  --tile-reveal-text: #000000;
   --success: #28a745;
   --error: #dc3545;
+  --letter-btn-bg: #ffffff;
+  --display-tile-unrevealed: #cccccc;
+  --display-tile-revealed: #1a1a1a;
+  --result-card-bg: #ffffff;
+  --overlay-bg: rgba(0, 0, 0, 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2d2d2d;
+    --accent-primary: #4a9eff;
+    --accent-secondary: #9ca3af;
+    --text-primary: #f0f0f0;
+    --text-secondary: #9ca3af;
+    --tile-bg: #3a3a3a;
+    --tile-border: #4a4a4a;
+    --tile-reveal: #4a4a4a;
+    --tile-reveal-text: #ffffff;
+    --success: #34d058;
+    --error: #f85149;
+    --letter-btn-bg: #3a3a3a;
+    --display-tile-unrevealed: #666666;
+    --display-tile-revealed: #f0f0f0;
+    --result-card-bg: #2d2d2d;
+    --overlay-bg: rgba(0, 0, 0, 0.8);
+  }
 }
 
 * {
@@ -102,8 +130,8 @@ body {
 
 .tile.revealed {
   background: var(--tile-reveal);
-  color: #000;
-  border-color: #000;
+  color: var(--tile-reveal-text);
+  border-color: var(--tile-reveal-text);
   transition: background 0.2s, color 0.2s;
 }
 
@@ -136,7 +164,8 @@ body {
 .letter-btn {
   width: 35px;
   height: 35px;
-  background: white;
+  background: var(--letter-btn-bg);
+  color: var(--text-primary);
   border: 1px solid var(--tile-border);
   border-radius: 4px;
   font-weight: 600;
@@ -161,7 +190,7 @@ body {
 }
 
 .difficulty-btn {
-  background: white;
+  background: var(--letter-btn-bg);
   border: 1px solid var(--tile-border);
   padding: 0.5rem 1rem;
   border-radius: 4px;
@@ -252,12 +281,12 @@ body {
   font-size: 1.1rem;
   border-radius: 4px;
   background: transparent;
-  color: #ccc;
+  color: var(--display-tile-unrevealed);
   transition: all 0.3s ease;
 }
 
 .display-tile.revealed {
-  color: #1a1a1a;
+  color: var(--display-tile-revealed);
 }
 
 .display-tile.empty {
@@ -266,18 +295,18 @@ body {
 }
 
 .display-tile.vowel {
-  color: #ccc;
+  color: var(--display-tile-unrevealed);
 }
 
 .display-tile.revealed.vowel {
-  color: #1a1a1a;
+  color: var(--display-tile-revealed);
 }
 
 /* Result Overlay */
 .result-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: var(--overlay-bg);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -285,7 +314,8 @@ body {
 }
 
 .result-card {
-  background: white;
+  background: var(--result-card-bg);
+  color: var(--text-primary);
   padding: 2rem;
   border-radius: 8px;
   text-align: center;
