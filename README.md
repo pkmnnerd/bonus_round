@@ -10,6 +10,8 @@ AI generated README below:
 
 # Wheel of Fortune Bonus Round
 
+**Live Demo: [https://pkmnnerd.github.io/bonus_round/](https://pkmnnerd.github.io/bonus_round/)**
+
 A browser-based recreation of the Wheel of Fortune bonus round, built with React and Vite.
 
 ## Features
